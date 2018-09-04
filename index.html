@@ -1,199 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Marklight  Reference</title>
-    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
-    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
-    <meta charset='utf-8'>
-    <script src="js/jquery.min.js" defer></script>
-    <script src="js/jazzy.js" defer></script>
-  </head>
-  <body>
-    <a title="Marklight  Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="index.html">Marklight Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/macteo/marklight"><img src="img/gh.png"/>View on GitHub</a></p>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="MarkLight is a framework for Unity that offers XUML a design language similar to HTML but instead of creating webpages it is used to design scenes in Unity.">
+<meta name="keywords" content="marklight, markux, mvvm, unity, unity3d, mvm, mvp, mvc, ux, ui, user interface, user experience, interfaces, game, games, controls, widgets, xml, markup, framework, design, create, share, dream, build, play, dynamic, responsive, fluid, intuitive, easy, simple, powerful, sleek, elegant, structured, flow, creative">
+<meta name="author" content="Ex Makina">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  
+<title>MarkLight | Unity Presentation Framework</title>
+<script src="js/html5shiv.js"></script>  <!-- support for HTML5 in IE8 -->
+<!-- CSS file links -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" id="styleChange" />
+<link href="css/jquery.bxslider.css" rel="stylesheet" />
+<link href="css/lightbox.css" type="text/css" rel="stylesheet" />
+<link href="css/responsive.css" type="text/css" rel="stylesheet" />
+<link href="css/vs.css" type="text/css" rel="stylesheet" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76413937-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+     function () {
+     document.location = url;
+     }
+   });
+}
+</script>
+</head>
+
+<body class="index-body">
+
+    <!-- Header Start -->
+     <header class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://www.marklightforunity.com/"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="current"><a href="#sliderAnchor">Home</a></li>
+                    <li><a href="https://www.assetstore.unity3d.com/#!/content/37466" class="external" onclick="trackOutboundLink('https://www.assetstore.unity3d.com/#!/content/37466'); return false;">Download</a></li>
+                    <li><a href="docs/introduction.html" class="external">Documentation</a></li> 
+                    <li><a href="https://www.patreon.com/studiodelight" class="external patreon"></a></li> 
+                </ul>
+            </div><!--/.navbar-collapse -->
+      </div><!-- END Container -->
+    </header><!-- END Header -->
+
+    <!-- Slider Start -->
+    <a class="anchor" id="sliderAnchor"></a>
+    <section class="jumbotron">
+        <div class="container">
+          <ul class="slides" style="display:none;">
+            <li>
+              <div class="col-lg-6">
+                <img id="jumbo-slide1" class="img-responsive" src="images/slideimg1.png" alt="mvvm" />
+              </div>
+              <div class="col-lg-5 slideText">
+                <h1><span>Presentation Framework</span> for <span>Unity</span></h1>
+                <p>Create sharable and stylable Unity components in a language similar to HTML.</p><br>
+
+<a href="https://www.assetstore.unity3d.com/#!/content/37466" class="button" onclick="trackOutboundLink('https://www.assetstore.unity3d.com/#!/content/37466'); return false;">Free Download&nbsp;&nbsp;&nbsp;</a>
+                <br>
+                <br>          
+              </div>
+            </li>
+          </ul><!-- END Slide 1 -->
+        </div><!-- END Container -->
+    </section><!-- END Slider -->
+
+    <!-- sub-slider message Start -->
+    <section id="subSliderMessage">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>MarkLight is a powerful framework for creating games in Unity. <span>Design, create</span> and <span>share</span> components in a whole new way</h2>            
+          </div>
+        </div>
+      </div><!-- END container -->
+    </section><!-- END Sub-slider message -->
+
+    <!-- Features Start -->
+    <a class="anchor" id="featuresAnchor"></a>
+
+    <!-- Feature 1 - XUML + General Workflow -->
+    <section class="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12"><h3>What is MarkLight?</h3></div>
+          <div class="col-lg-12"><img class="dividerWide" src="images/divider.png" alt=""></div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <div class="row">
+              <div class="col-lg-12 features_intro">
+                MarkLight offers <b>XUML</b> (eXtensible Unity Markup Language) a declarative design language similar in syntax to HTML but instead of defining the contents of a webpage it is used to design scenes in Unity.<br>
+                <br>
+                XUML can be used to create <b>views</b> and define their relationship to the underlying game logic. Views are modular building blocks that can represent anything in the scene (UI widgets, meshes, lights, etc):<br>
+                <br>
+                <h2>XUML &amp; View Model</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 features_intro">
+                <i>MainMenu.xml (XUML)</i>
+                <pre><code class="xml">
+&lt;MainMenu&gt;
+    &lt;Group Spacing="10px"&gt;
+        &lt;Button Text="Play" Click="StartGame" /&gt;
+        &lt;Button Text="Options" /&gt;
+        &lt;Button Text="Quit" /&gt;
+    &lt;/Group&gt;
+&lt;/MainMenu&gt;
+
+                </code></pre>            
+              </div>
+              <div class="col-lg-6 features_intro">
+                <i>MainMenu.cs (View Model)</i>
+                <pre><code class="C#">
+public class MainMenu : UIView
+{
+    public void StartGame()
+    {
+        // called when user clicks on "Play" button
+        Debug.Log("StartGame() called");
+    }
+}
+                </code></pre>            
+              </div>        
+            </div>
+            <div class="row">
+              <div class="col-lg-12 features_intro">
+                The above example shows how to create a simple main menu view that responds to user interaction:<br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-5 features_intro">
+                <img src="images/marklight/documentation/gettingstarted/clicklog.png" alt="main menu" />
+              </div>
+              <div class="col-lg-7 features_intro">
+                Through this simple mechanism (called <b>MVVM</b>) you can build upon existing views and create advanced re-usable functionality with ease. It also serves to decouple presentation from game logic which helps keep designer and developer responsibilities separate.
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 features_intro">
+                <br>
+                <h2>Data Binding</h2>
+                <br>
+                Data binding solves the problem of keeping your game data synchronized with its presentation. Here is an example of an highscore list generated from dynamic data using a custom template:<br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 features_intro">
+                <i>Highscore.xml</i>
+                <pre><code class="xml">
+&lt;List Items="{Highscores}"&gt;
+    &lt;ListItem IsTemplate="True"&gt;
+      &lt;Group Orientation="Horizontal"&gt;
+          &lt;Label Text="{#Item.PlayerName}" /&gt;
+          &lt;Label Text="{#Item.Score}" /&gt;
+      &lt;/Group&gt;
+    &lt;/ListItem&gt;
+&lt;/List&gt;
+
+                </code></pre>            
+              </div>
+              <div class="col-lg-6 features_intro">
+                <i>Highscore.cs</i>
+                <pre><code class="C#">
+public class HighscoreList : UIView
+{
+    public ObservableList&lt;Highscore&gt; Highscores;
+
+    public override void Initialize()
+    {
+        // populate highscores from data source
+    }
+}
+                </code></pre>            
+              </div>        
+            </div>
+            <div class="row">
+              <div class="col-lg-12 features_intro">
+          <img src="images/documentation/working-with-list-data/dynamiclist2.png" class="img-responsive" alt="polished dynamic list view"><br>
+
+                If you update the highscore list, e.g. add another entry, the view is automatically updated with no additional code required.
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12 features_intro">
+                <h2>And Much More...</h2>
+                <br>
+                Some more key features includes <b>multi binding</b>, <b>animations</b>, <b>theming &amp; styling</b> and <b>state management</b>. The framework comes with 40+ views in 3 different themes. It's compatible with PC, Mac, iOS, Android, WebGL, Android and Windows Phone. Full source is included.<br>
+                <br>
+                It's a new elegant and intuitive way of designing and developing scenes in Unity. It speeds up development, it bridges the gap between designers and programmers through a common language, it allows designs to be more easily shared in the community. It's <b>intuitive</b>, <b>powerful</b> and <b>easy to use</b>.<br>
+              </div>
+            </div>            
+          </div>     
+          <div class="col-lg-1"></div>
+        </div>
       </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="index.html">Marklight Reference</a>
-        <img id="carat" src="img/carat.png" />
-        Marklight  Reference
-      </p>
-    </div>
-    <div class="content-wrapper">
-      <nav class="sidebar">
-        <ul class="nav-groups">
-          <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Classes/MarklightTextStorage.html">MarklightTextStorage</a>
-              </li>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="bx-wrapper" style="max-width: 100%;">
+            <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 164px;"><ul class="slides2" style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(-1170px, 0px, 0px);">
+                <li style="float: left; list-style: none; position: relative; width: 1170px;">                  
+                  <div class="col-lg-2"><img src="images/testimonialImage.png" alt=""></div>
+                  <div class="col-lg-10">
+                    <h1><span>"</span>This asset saved me so much time on a project already. It keeps game logic and UI logic separated which is perfect for keeping a project organized...All in all I love this tool! </h1>
+                    <p><span><a href="https://www.assetstore.unity3d.com/#!/content/37466">Asset Store Reviewer</a></span></p>
+                  </div>
+                </li>
+
+                <li style="float: left; list-style: none; position: relative; width: 1170px;">
+                  <div class="col-lg-2"><img src="images/testimonialImage.png" alt=""></div>
+                  <div class="col-lg-10">
+                  <h1><span>"</span>I really love it. If you are doing a 2D / camera space based UI for your application there is probably no better option right now.</h1>
+                  <p><span><a href="https://www.assetstore.unity3d.com/#!/content/37466">Asset Store Reviewer</a></span></p>
+                  </div>
+                </li>
+
+                <li style="float: left; list-style: none; position: relative; width: 1170px;">
+                  <div class="col-lg-2"><img src="images/testimonialImage.png" alt=""></div>
+                  <div class="col-lg-10">
+                  <h1><span>"</span>This has dramatically improved my workflow when working with other team members, this makes UI design portable and much easier to work with vs dragging elements in the scene editor!</h1>
+                  <p><span><a href="https://www.assetstore.unity3d.com/#!/content/37466">Asset Store Reviewer</a></span></p>
+                  </div>
+                </li>
+
+                <li style="float: left; list-style: none; position: relative; width: 1170px;">
+                  <div class="col-lg-2"><img src="images/testimonialImage.png" alt=""></div>
+                  <div class="col-lg-10">
+                  <h1><span>"</span>I am really impressed by this framework and how easy it is to create your own UI elements and add styles to the themes.</h1>
+                  <p><span><a href="https://www.assetstore.unity3d.com/#!/content/37466">Asset Store Reviewer</a></span></p>
+                  </div>
+                </li>
+
+                <li style="float: left; list-style: none; position: relative; width: 1170px;">
+                  <div class="col-lg-2"><img src="images/testimonialImage.png" alt=""></div>
+                  <div class="col-lg-10">
+                  <h1><span>"</span>I'm impressed...its one of the most well coded assets I've seen in the store</h1>
+                  <p><span><a href="https://www.assetstore.unity3d.com/#!/content/37466">Asset Store Reviewer</a></span></p>
+                  </div>
+                </li>
+
+                <li style="float: left; list-style: none; position: relative; width: 1170px;">
+                  <div class="col-lg-2"><img src="images/testimonialImage.png" alt=""></div>
+                  <div class="col-lg-10">
+                  <h1><span>"</span>Pretty amazing stuff here... If you (like me) come from an XML-oriented design environment (like Adobe Flex or Android), you will feel at home here.</h1>
+                  <p><span><a href="https://www.assetstore.unity3d.com/#!/content/37466">Asset Store Reviewer</a></span></p>
+                  </div>
+                </li>
+
+                <li style="float: left; list-style: none; position: relative; width: 1170px;">
+                  <div class="col-lg-2"><img src="images/testimonialImage.png" alt=""></div>
+                  <div class="col-lg-10">
+                  <h1><span>"</span>Absolutely worth the time saved. It's a well thought-out workflow, extremely easy to jump right in, and get your ideas on the canvas, without hassling with UI wiring, data binding, etc.</h1>
+                  <p><span><a href="https://www.assetstore.unity3d.com/#!/content/37466">Asset Store Reviewer</a></span></p>
+                  </div>
+                </li>
+
+                <li style="float: left; list-style: none; position: relative; width: 1170px;">
+                  <div class="col-lg-2"><img src="images/testimonialImage.png" alt=""></div>
+                  <div class="col-lg-10">
+                  <h1><span>"</span>It's a professinal way to making UI, actually, I'm surprised why Unity3D didn't ship this feature with the new UI system. </h1>
+                  <p><span><a href="https://www.assetstore.unity3d.com/#!/content/37466">Asset Store Reviewer</a></span></p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div><!-- END Row -->
+      </div><!-- END Container -->
+    </section>
+
+
+    <section class="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+              <div class="image">
+              <img src="images/screenshot1_small.png" class="screenshotImage" alt="placeholder">
+              <a href="images/screenshot1.png" data-lightbox="screenshot1" title="This is a caption" class="overlay" style="display: none;"><img class="linkIcon" src="images/icons/linkIcon.png" alt=""></a>
+              </div>
+            <h4>Fast Workflow</h4>
+            <p>Development is accelerated through a fast and fluid workflow. Views are automatically processed by the editor. Intellisense support when editing markup. Text based editing allows for copy &amp; paste, search/replace.</p>
+          </div>
+          <div class="col-lg-3">
+            <div class="image">
+            <img src="images/screenshot2_small.png" class="screenshotImage" alt="placeholder">
+            <a href="images/screenshot2.png" data-lightbox="screenshot2" title="This is a caption" class="overlay" style="display: none;"><img class="linkIcon" src="images/icons/linkIcon.png" alt=""></a>
+            </div>
+            <h4>Data Binding</h4>
+            <p>The framework provides advanced data binding support such as multi binding. It allows you to seamlessly connect views to your game logic and it helps you keep data and its presentation in sync.</p>
+          </div>
+          <div class="col-lg-3">
+            <div class="image">
+              <img src="images/screenshot3_small.png" class="screenshotImage" alt="placeholder">
+              <a href="images/screenshot3.png" data-lightbox="screenshot3" title="This is a caption" class="overlay" style="display: none;"><img class="linkIcon" src="images/icons/linkIcon.png" alt=""></a>
+            </div>
+            <h4>Theming &amp; Styling</h4>
+            <p>Through theme files you can modify view settings through CSS-like selector logic. It allows you to change, e.g. a button appearance throughout your entire game by modifying a single line.</p>
+          </div>
+          <div class="col-lg-3">
+            <div class="image">
+              <img src="images/screenshot4_small.png" class="screenshotImage" alt="placeholder">
+              <a href="images/screenshot4.png" data-lightbox="screenshot4" title="This is a caption" class="overlay" style="display: none;"><img class="linkIcon" src="images/icons/linkIcon.png" alt=""></a>
+            </div>
+            <h4>Custom Views</h4>
+            <p>The framework is designed towards you creating your own advanced modular views from scratch and not just using existing views.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12"><h3>Features</h3></div>
+          <div class="col-lg-12"><img class="dividerWide" src="images/divider.png" alt=""></div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="images/features/feature1.png" alt="XUML feature">
+          </div>
+          <div class="col-lg-6 featureItem">
+            <div class="row">
+              <div class="featureIcon xmlIcon"></div>
+              <h4>Design views using a powerful <strong>markup language</strong></h4>
+              <p>Design, share and re-use views (scene elements) using a declarative design language. Views can be freely nested, re-used and combined.</p>
+            </div>
+            <div class="row">
+              <div class="featureIcon xml2Icon"></div>
+              <h4>Fast and fluid workflow</h4>
+              <p>Views are automatically processed and wired to their ViewModel through naming conventions. The process is fast and views are presented in the scene as changes are saved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 2 - DataBinding & Actions -->
+    <section class="features altrow-color">      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 featureItem">
+            <div class="row">
+              <div class="featureIcon databindingIcon"></div>
+              <h4>Elegant &amp; Intuitive DataBinding</h4>
+              <p>Using naming conventions and smart binding logic, binding data to your views is very straight forward. No "plumbing" or configuration required. The framework also supports multi binding.</p>
+            </div>
+            <div class="row">
+              <div class="featureIcon interactiveIcon"></div>
+              <h4>Interactive</h4>
+              <p>Effortlessy create interactive views that respond to user interactions. Use the existing event system events (click, drags, etc) or create custom actions with ease.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="images/features/feature2_medium.png" class="feature2-responsive" alt="interactive feature">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 3 - Animations & Transitions -->
+    <section class="features">      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="images/features/feature3.png" alt="animation feature">
+          </div>
+          <div class="col-lg-6 featureItem">
+            <div class="row">
+              <div class="featureIcon animationIcon"></div>
+              <h4>Animate views using markup</h4>
+              <p>Quickly create animations using markup. Re-use animations on different views.</p>
+            </div>
+            <div class="row">
+              <div class="featureIcon transitionIcon"></div>
+              <h4>Easy Transitions</h4>
+              <p>Creating animated transitions between views is easy using the ViewSwitcher view.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 4 - Theming and Standard Views -->
+    <section class="features altrow-color">      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 featureItem">
+            <div class="row">
+              <div class="featureIcon themingIcon"></div>
+              <h4>Flexible styling using Themes</h4>
+              <p>Modify the look &amp; feel of views using Theme files. Control the theming through id- and style-selectors (similar to CSS).</p>
+            </div>
+            <div class="row">
+              <div class="featureIcon catalogueIcon"></div>
+              <h4>Catalogue of Views and Themes</h4>
+              <p>40+ views are included. Since views can be easily created and shared expect to see a growing catalogue of views available for download.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="images/features/feature4.png" alt="theming feature">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 5 - Dynamic and Responsive -->
+    <section class="features">      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="images/features/feature5.png" alt="dynamic feature">
+          </div>
+          <div class="col-lg-6 featureItem">
+            <div class="row">
+              <div class="featureIcon dynamicIcon"></div>
+              <h4>Dynamic Content</h4>
+              <p>Have views adjust to run-time changes of data as shown by the FlowList and List views.</p>
+            </div>
+            <div class="row">
+              <div class="featureIcon responsiveIcon"></div>
+              <h4>Responsive Layout</h4>
+              <p>Have views adjust to content and layout changes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Misc Features -->
+    <section class="features altrow-color">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-1"></div>
+            <div class="col-lg-5 featureItem">
+            <div class="featureIcon xml2Icon"></div>
+            <h4>Intuitive &amp; Flexible Layouting</h4>
+            <p>Specify width and height of views using percentage, pixels or elements (user defined unit). Anchor views by setting alignment. Use margins and offsets to adjust positioning.</p>
+          </div>
+          <div class="col-lg-5 featureItem">
+            <div class="featureIcon xml2Icon"></div>
+            <h4>Display sets of data</h4>
+            <p>Displaying lists and sets of data is easy using the FlowList and List views. Bind custom data to the list and control the way items are presented using templates.</p>
+          </div>
+         <div class="col-lg-1"></div>
+        </div><!-- END Row -->
+
+        <div class="row">
+          <div class="col-lg-1"></div>
+            <div class="col-lg-5 featureItem">
+            <div class="featureIcon xml2Icon"></div>
+            <h4>Similar to WPF and other MVVM frameworks</h4>
+            <p>If you've worked with MVVM frameworks such as WPF (XAML), Silverlight, Caliburn, AngularJS, Prism, etc. you'll feel at home with MarkLight.</p>
+          </div>
+          <div class="col-lg-5 featureItem">
+            <div class="featureIcon xml2Icon"></div>
+            <h4>Based on new Unity 4.6 UI</h4>
+            <p>Since it is based on the new Unity 4.6 UI it will be able to take advantage of new features as the Unity UI system continues to evolve.</p>
+          </div>
+         <div class="col-lg-1"></div>
+        </div><!-- END Row -->
+
+
+      </div><!-- END Container -->      
+    </section><!-- END Features -->
+
+    <!-- Start subscription box -->
+    <section id="promoBox">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4><span>Join the Announcement List</span></h4>
+            <p>Be notified when new themes, views, tutorials and updates are available</p>
+          </div>
+          <div class="col-lg-6">
+            <form method="post" name="subscribeForm" id="subscribeForm" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="news" />
+                <input type="hidden" name="domain" value="markux.com" />
+                <input type="text" name="email" id="emailInput" placeholder="your email here" /> 
+                <input type="submit" name="submit" id="subscribeButton" value="Subscribe" /> 
+            </form>
+
+          </div>
+        </div><!-- END Row -->
+      </div><!-- END container -->
+    </section><!-- END Promo box -->
+
+    <footer>
+      <div class="container">
+        <div class="row footer-info">
+          <div class="col-lg-5">
+            <img src="images/exmakina.png" alt="company logo" />
+          </div>
+          <div class="col-lg-3 contact">
+            <ul>
+              <li><img src="images/icons/footerMail.png" alt="mail icon" /><a href="mailto:contact@marklightforunity.com "> contact@marklightforunity.com </a></li> 
+            </ul>                
+          </div>
+          <div class="col-lg-4">
+            <ul class="socialIcons footer-social socialIconsOffset">
+                <li><a href="https://twitter.com/MarkUX" onclick="trackOutboundLink('https://twitter.com/MarkUX'); return false;" class="twitterIcon" target="_blank"></a></li>
+                <li><a href="http://www.reddit.com/r/marklight" onclick="trackOutboundLink('http://www.reddit.com/r/marklight'); return false;" class="redditIcon" target="_blank"></a></li>
+                <li><span class="slackOffset"><script async defer src="https://marklightconnect.azurewebsites.net/slackin.js"></script></span></li>
             </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Structs.html">Structs</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Structs/Marklight.html">Marklight</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <article class="main-content">
-        <section>
-          <section class="section">
-            
-            <a href='#marklight' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='marklight'>Marklight</h1>
+          </div>
+        </div><!-- END Row -->
+      </div><!-- END Container -->
+    </footer><!-- END Footer -->
+    
+<!-- JavaScript file links -->
+<script src="js/jquery-1.12.3.min.js"></script>            <!-- Jquery -->
+<script src="js/bootstrap.min.js"></script>     <!-- bootstrap -->
+<script src="js/jquery.bxslider.min.js"></script>  <!-- bxslider -->
+<script src="js/tabs.js"></script> <!-- custom tab script -->
+<script src="js/lightbox-2.6.min.js"></script>  <!-- lightbox -->
+<script src="js/jquery.scrollTo.js"></script>  <!-- scollTo -->
+<script src="js/jquery.nav.js"></script>  <!-- one page nav -->
+<script src="js/respond.js"></script>
+<script src="js/highlight.pack.js"></script>
 
-<p>Markdown syntax highlighter for iOS.</p>
+<script>
+  "use strict";
+  // ACTIVATE BXSLIDER (for slider section)
+  $(document).ready(function(){
+    $('.slides').fadeIn().bxSlider({
+      auto: false,
+      pager: false,
+      nextSelector: '#slider-next',
+      prevSelector: '#slider-prev',
+      nextText: '<img src="images/nextButton.png" alt="slider next" />',
+      prevText: '<img src="images/prevButton.png" alt="slider prev" />',
+      // triggers slider animations on slide change
+      onSlideBefore: function(){
+        $('.jumbotron img').addClass("fadeInReallyFast"); 
+        $('.jumbotron h1').addClass("fadeInFast");  
+        $('.jumbotron p').addClass("fadeInMed"); 
+        $('.jumbotron .button').addClass("fadeInSlow"); 
+        $('.jumbotron .buttonSmall').addClass("fadeInSlow"); 
+        $('#emailInputSlider').addClass("fadeInSlow"); 
 
-<p><a href="https://cocoapods.org/?q=desman"><img src="https://img.shields.io/cocoapods/v/Marklight.svg" alt="CocoaPods"></a> <a href="https://raw.githubusercontent.com/macteo/marklight/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/Marklight.svg" alt="License MIT"></a> <a href="http://cocoadocs.org/docsets/Marklight"><img src="https://img.shields.io/cocoapods/p/marklight.svg" alt="Platforms"></a> <a href="http://cocoadocs.org/docsets/Marklight"><img src="https://img.shields.io/cocoapods/v/marklight.svg" alt="Version"></a> <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a> <img src="https://travis-ci.org/macteo/Markingbird.svg" alt=""></p>
+        setTimeout (function(){
+        $('.jumbotron img').removeClass("fadeInReallyFast"); 
+        $('.jumbotron h1').removeClass("fadeInFast");  
+        $('.jumbotron p').removeClass("fadeInMed"); 
+        $('.jumbotron .button').removeClass("fadeInSlow"); 
+        $('.jumbotron .buttonSmall').removeClass("fadeInSlow"); 
+        $('#emailInputSlider').removeClass("fadeInSlow"); 
+        }, 15400);
+      }
+    });
 
-<p>Regular expressions are taken from on <a href="https://github.com/kristopherjohnson/Markingbird">Markingbird</a>: markdown parser and html generator.</p>
-<a href='#features' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='features'>Features</h2>
+    //Triggers slider animations on page load
+    $(document).ready(function() {
+        $('.jumbotron img').toggleClass("fadeInReallyFast"); 
+        $('.jumbotron h1').toggleClass("fadeInFast"); 
+        $('.jumbotron p').toggleClass("fadeInMed"); 
+        $('.jumbotron .button').toggleClass("fadeInSlow"); 
+        $('.jumbotron .buttonSmall').toggleClass("fadeInSlow"); 
+        $('#emailInputSlider').toggleClass("fadeInSlow"); 
 
-<ul>
-<li>[x] Applicable to any <code>UITextView</code>.</li>
-<li>[x] <code>NSTextStorage</code> subclass ready to use.</li>
-<li>[x] Struct optimized for performances.</li>
-<li>[x] Swift 2.1 compatible.</li>
-<li>[x] Dynamic text style supported.</li>
-<li>[x] Customizable syntax color.</li>
-<li>[x] Choose font and color for code blocks.</li>
-<li>[x] Choose font and color for quotes.</li>
-<li>[x] Choose dynamic type font text style.</li>
-<li>[x] Quote indentation.</li>
-<li>[x] Documented.</li>
-<li>[ ] Parsing tests.</li>
-<li>[ ] Performance tests.</li>
-<li>[ ] OS X compatibility.</li>
-</ul>
-<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
+        setTimeout (function(){
+        $('.jumbotron img').removeClass("fadeInReallyFast"); 
+        $('.jumbotron h1').removeClass("fadeInFast");  
+        $('.jumbotron p').removeClass("fadeInMed"); 
+        $('.jumbotron .button').removeClass("fadeInSlow"); 
+        $('.jumbotron .buttonSmall').removeClass("fadeInSlow"); 
+        $('#emailInputSlider').removeClass("fadeInSlow"); 
+        }, 1400);
+    });
 
-<ul>
-<li>iOS 8.0+</li>
-<li>Xcode 7.2+</li>
-</ul>
-<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
-<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>CocoaPods</h3>
+    //activate second bxslider (for testimonials section)
+    $('.slides2').bxSlider({
+      auto: true,
+      pause: 6000
+    });
+    });
 
-<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
-<pre class="highlight shell"><code><span class="gp">$ </span>gem install cocoapods
-</code></pre>
 
-<blockquote>
-<p>CocoaPods 0.39.0+ is required to build Marklight.</p>
-</blockquote>
+// ACTIVATE ONE PAGE NAV 
+$(document).ready(function() {
+    $('.nav.navbar-nav.navbar-right').onePageNav({
+        currentClass: 'current',
+        filter: ':not(.external)'
+    });
+});
 
-<p>To integrate Marklight into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
-<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
-<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
-<span class="n">use_frameworks!</span>
+"use strict";
+// SCREENSHOT IMAGE HOVERS
+$('.image').mouseover(function()
+{
+    $(".overlay", this).stop(true, true).fadeIn();
+}); 
 
-<span class="n">pod</span> <span class="s1">'Marklight'</span>
-</code></pre>
+$('.image').mouseout(function()
+{
+    $(".overlay", this).stop(true, true).fadeOut();
+}); 
+</script>
 
-<p>Then, run the following command:</p>
-<pre class="highlight shell"><code><span class="gp">$ </span>pod install
-</code></pre>
-<a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='carthage'>Carthage</h3>
+<script>
+  "use strict";
 
-<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
+$(document).ready(function() {
+    hljs.initHighlightingOnLoad();
+    $('.nav.navbar-nav.navbar-right').onePageNav({
+        currentClass: 'current',
+        filter: ':not(.external)'
+    }); 
+});
+</script>
 
-<p>You can install <a href="https://github.com/Carthage/Carthage">Carthage</a> with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
-<pre class="highlight shell"><code><span class="gp">$ </span>brew update
-<span class="gp">$ </span>brew install carthage
-</code></pre>
-
-<p>To integrate Marklight into your Xcode project using <a href="https://github.com/Carthage/Carthage">Carthage</a>, specify it in your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "macteo/Marklight"
-</code></pre>
-
-<p>Run <code>carthage update --platform iOS</code> to build the framework and drag the built <code>Marklight.framework</code> into your Xcode project.</p>
-<a href='#manually' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='manually'>Manually</h3>
-
-<p>Add the <em>Marklight</em> Xcode project to your own. Then add the <code>Marklight</code> framework as desired to the embedded binaries of your app&rsquo;s target.</p>
-<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
-
-<p>In this repository you can find a sample project with few lines of code in the <code>ViewController</code> class for a jumpstart.</p>
-
-<p><em>Sample code is written in Swift but Objective-C should be supported too, if you find an incompatibility please open an issue.</em></p>
-<a href='#integration' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='integration'>Integration</h3>
-
-<p>The easiest way to crete a user editable <code>UITextView</code> with markdown syntax highlight is to use the provided <code>MarklightTextStorage</code> class as <code>NSTextStorage</code> and add the <code>UITextView</code>&rsquo;s <code>textLayout</code> to the <code>MarklightTextStorage</code> text storage.</p>
-
-<p>Import <em>Marklight</em> modules into your Swift class</p>
-<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Marklight</span>
-</code></pre>
-
-<p>or if you are writing in Objective-C</p>
-<pre class="highlight objective_c"><code><span class="cp">#import &lt;Marklight/Marklight-Swift.h&gt;
-</span></code></pre>
-
-<blockquote>
-<p>Keep in mind the you have to let the project generate the Bridging Header otherwise the integration may fail.</p>
-</blockquote>
-
-<p>In your <code>UIViewController</code> subclass keep a strong instance of the this <code>MarklightTextStorage</code> class.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">textStorage</span> <span class="o">=</span> <span class="kt">MarklightTextStorage</span><span class="p">()</span>
-</code></pre>
-
-<p>Customize the appearance as desired:</p>
-
-<ul>
-<li>Dynamic text style.</li>
-<li>Markdown syntax color.</li>
-<li>Code&rsquo;s font and color.</li>
-<li>Quotes&rsquo; font and color.</li>
-</ul>
-
-<p>As per Apple&rsquo;s documentation it should be enough to assign the <code>UITextView</code>&rsquo;s <code>NSLayoutManager</code> to the <code>NSTextStorage</code> subclass, in our case <code>MarklightTextStorage</code>.</p>
-<pre class="highlight swift"><code> <span class="n">textStorage</span><span class="o">.</span><span class="nf">addLayoutManager</span><span class="p">(</span><span class="n">textView</span><span class="o">.</span><span class="n">layoutManager</span><span class="p">)</span>
-</code></pre>
-
-<p>However I&rsquo;m experiencing some crashes if I want to preload some text instead of letting the user start from scratch with a new text. A workaround is proposed below.</p>
-
-<p>For simplicity we assume you have a <code>String</code> to be highlighted inside an editable <code>UITextView</code> loaded from a storyboard.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="s">"# My awesome markdown string"</span>
-</code></pre>
-
-<p>Convert <code>string</code> to an <code>NSAttributedString</code></p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">attributedString</span> <span class="o">=</span> <span class="kt">NSAttributedString</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span>
-</code></pre>
-
-<p>Set the loaded string to the <code>UITextView</code></p>
-<pre class="highlight swift"><code><span class="n">textView</span><span class="o">.</span><span class="n">attributedText</span> <span class="o">=</span> <span class="n">attributedString</span>
-</code></pre>
-
-<p>Append the loaded string to the <code>NSTextStorage</code></p>
-<pre class="highlight swift"><code><span class="n">textStorage</span><span class="o">.</span><span class="nf">appendAttributedString</span><span class="p">(</span><span class="n">attributedString</span><span class="p">)</span>
-</code></pre>
-
-<p>Enjoy.</p>
-<a href='#acknowledgements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='acknowledgements'>Acknowledgements</h2>
-
-<p>Matteo Gavagnin – <a href="http://twitter.com/macteo">@macteo</a></p>
-
-<hr>
-
-<p>Marklight is heavily based on <a href="https://github.com/kristopherjohnson/Markingbird">Markingbird</a>, so many thanks to <a href="http://undefinedvalue.com">Kristopher Johnson</a> and every previous contribution on which <a href="https://github.com/kristopherjohnson/Markingbird">Markingbird</a> is based upon.</p>
-<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
-
-<p>Marklight is released under the MIT license. See <a href="https://raw.githubusercontent.com/macteo/Marklight/master/LICENSE">LICENSE</a> for details.</p>
-
-          </section>
-        </section>
-        <section id="footer">
-          <p>&copy; 2015 <a class="link" href="http://macteo.it" target="_blank" rel="external">MacTeo</a>. All rights reserved. (Last updated: 2015-12-31)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.4.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
-      </article>
-    </div>
-  </body>
-</div>
+</body>
 </html>
